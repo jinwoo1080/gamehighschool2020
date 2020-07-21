@@ -10,5 +10,10 @@ public class Bullet : MonoBehaviour
     {
         Vector3 movemont = transform.up * m_Speed * Time.deltaTime;
         transform.position += movemont;
+
+        if (transform.position.y > 15f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
